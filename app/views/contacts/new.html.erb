@@ -1,1 +1,15 @@
 <h1>Contact us</h1>
+
+<%= form_for :article, url: contacts_path do |f| %>
+	<p>
+		<%= f.label :email %>
+		<%= f.text_field :titleemail %>
+	</p>
+	<p>
+		<%= f.label :message %>
+		<%= f.text_area :message %>
+	</p>
+	<p>
+		<%= f.submit 'Send message'%>
+	</p>
+<% end %>

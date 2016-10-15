@@ -11,5 +11,9 @@
 		<div class="create" style="font-size: 11px;">
 			<%= variable.created_at %>
 		</div>
+		<div class="links">
+			<%= link_to 'Read more', article_path(variable) %> |
+			<%= link_to 'Edit article', edit_article_path(variable) %>
+		</div>
 	</article>
 <% end %>

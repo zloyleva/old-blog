@@ -1,0 +1,15 @@
+<h1>List of articles</h1>
+
+<% @articles.each do |variable| %>
+	<article style="border-left: 4px solid; padding-left: 10px; ">
+		<h2 class="title">
+			<%= variable.title %>
+		</h2>
+		<div class="text" >
+			<%= variable.text %>
+		</div>
+		<div class="create" style="font-size: 11px;">
+			<%= variable.created_at %>
+		</div>
+	</article>
+<% end %>

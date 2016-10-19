@@ -4,6 +4,15 @@
 <p><%= @article.text %></p>
 
 
+<% @article.comments.each do |variable| %>
+	<div style="border-left: 4px solid; padding-left: 10px; ">
+		<p>Author: <%= variable.author %></p> 
+		<p>Comment: <i><%= variable.body %></i> </p> 
+	</div>
+<% end %>
+
+
+
 <%= form_for([@article, @article.comments.build]) do |f|	%>
 	
 	<p>

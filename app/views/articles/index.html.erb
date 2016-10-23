@@ -12,10 +12,12 @@
 			<%= variable.created_at %>
 		</div>
 		<div class="links">
-			<%= link_to 'Read more', article_path(variable) %> |
-			<%= link_to 'Edit article', edit_article_path(variable) %>
-			|
-			<%= link_to 'Delete', variable,  data: {method: :delete, confirm: 'Are you sure?'} %>
+			<%= link_to 'Read more', article_path(variable) %>
+			<% if current_user %> |
+				<%= link_to 'Edit article', edit_article_path(variable) %>
+				|
+				<%= link_to 'Delete', variable,  data: {method: :delete, confirm: 'Are you sure?'} %>
+			<% end %>
 		</div>
 	</article>
 <% end %>

@@ -46,6 +46,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 group :test, :development do
-  gem "rspec-rails", "~> 2.4"
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'capybara'
+end
+
+group :test do
+  gem "shoulda-matchers", "< 3.0.0",
+    require: false
 end
